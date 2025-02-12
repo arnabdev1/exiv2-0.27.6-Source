@@ -2,7 +2,15 @@
 // case 'g': rc = evalGrep(optarg); break;
 // case 'K': rc = evalKey(optarg); printMode_ = pmList; break;
 // case 'n': charset_ = optarg; break;
+// case 'r': rc = evalRename(opt, optarg); break;
 // case 'a': rc = evalAdjust(optarg); break;
+// case 'e': rc = evalExtract(optarg); break;
+// case 'i': rc = evalInsert(optarg); break;
+// case 'c': rc = evalModify(opt, optarg); break;
+// case 'm': rc = evalModify(opt, optarg); break;
+// case 'M': rc = evalModify(opt, optarg); break;
+// case 'l': directory_ = optarg; break;
+// case 'S': suffix_ = optarg; break;
 
 // ***************************************************************** -*- C++ -*-
 /*
@@ -395,7 +403,7 @@ int Params::option(int opt, const std::string& optarg, int optopt)
     // case 'g': rc = evalGrep(optarg); break;
     // case 'K': rc = evalKey(optarg); printMode_ = pmList; break;
     // case 'n': charset_ = optarg; break;
-    case 'r': rc = evalRename(opt, optarg); break;
+    // case 'r': rc = evalRename(opt, optarg); break;
     case 't': rc = evalRename(opt, optarg); break;
     case 'T': rc = evalRename(opt, optarg); break;
     // case 'a': rc = evalAdjust(optarg); break;
@@ -405,14 +413,14 @@ int Params::option(int opt, const std::string& optarg, int optopt)
     case 'p': rc = evalPrint(optarg); break;
     case 'P': rc = evalPrintFlags(optarg); break;
     case 'd': rc = evalDelete(optarg); break;
-    case 'e': rc = evalExtract(optarg); break;
+    // case 'e': rc = evalExtract(optarg); break;
     case 'C': rc = evalExtract(optarg); break;
-    case 'i': rc = evalInsert(optarg); break;
-    case 'c': rc = evalModify(opt, optarg); break;
-    case 'm': rc = evalModify(opt, optarg); break;
-    case 'M': rc = evalModify(opt, optarg); break;
-    case 'l': directory_ = optarg; break;
-    case 'S': suffix_ = optarg; break;
+    // case 'i': rc = evalInsert(optarg); break;
+    // case 'c': rc = evalModify(opt, optarg); break;
+    // case 'm': rc = evalModify(opt, optarg); break;
+    // case 'M': rc = evalModify(opt, optarg); break;
+    // case 'l': directory_ = optarg; break;
+    // case 'S': suffix_ = optarg; break;
     case ':':
         std::cerr << progname() << ": " << _("Option") << " -" << static_cast<char>(optopt)
                    << " " << _("requires an argument\n");
